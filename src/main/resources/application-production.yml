@@ -11,7 +11,7 @@ spring:
       oauth2:
          resourceserver:
             jwt:
-               issuer-uri: http://localhost:8081/realms/mscredito
+               issuer-uri: http://${KEYCLOAK_SERVER}:${KEYCLOAK_PORT}/realms/mscredito
 
 server:
    port: 8080
@@ -22,7 +22,7 @@ eureka:
       fetch-registry: true
       register-with-eureka: true
       service-url:
-         defaultZone: http://ms-eureka-user:R3JhdmlkYSBvZGlvIHBvcnR0aXRvciBwb3RlbnRpIHByZXRpdW0gdWxsYW1jb3JwZXIgc3VzY2lwaXQgcXVpc3F1ZSBwaGFyZXRyYQ==@localhost:8761/eureka
+         defaultZone: http://ms-eureka-user:R3JhdmlkYSBvZGlvIHBvcnR0aXRvciBwb3RlbnRpIHByZXRpdW0gdWxsYW1jb3JwZXIgc3VzY2lwaXQgcXVpc3F1ZSBwaGFyZXRyYQ==@${EUREKA_SERVER}:8761/eureka
 
 
 management:
